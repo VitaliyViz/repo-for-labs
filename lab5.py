@@ -1,4 +1,10 @@
+"""
+Making Class Student
+"""
 class Student:
+    """
+    Class Студент
+    """
     def __init__(self, name, surname, rating):
         """
         Short info about student
@@ -9,7 +15,10 @@ class Student:
         self.points = {}
 
     def __repr__(self):
-        return "Студент"
+        """
+        returns "Student"
+        """
+        return "Student"
 
     def add_to_points(self, **kwargs):
         """
@@ -19,12 +28,15 @@ class Student:
             self.points[subject] = point
 
     def average_point(self):
+        """
+        calculates Average point of all Marks
+        """
         values = len(self.points)
         if values == 0:
             return 0
         total = sum(self.points.values())
-        average = total / values
-        return average
+        average_score = total / values
+        return average_score
 
     def get_info(self):
         """
@@ -37,11 +49,15 @@ class Student:
 
 
 class Group:
+    """
+    Gruop of Students
+    """
     def __init__(self, students):
         """
         Group list 
         """
         self.students = []
+        self.student = students
     def add_student(self, student):
         """
         Method adds student
@@ -74,8 +90,6 @@ average = student_1.average_point()
 student_2 = Student("Tim", "Johns", 82)
 student_2.add_to_points(Math = 7, IT = 9, English = 8)
 
-
-
 group = Group([])
 group.add_student(student_1)
 group.add_student(student_2)
@@ -88,6 +102,9 @@ print("----------")
 print(group.get_students())
 print("----------")
 
+
+print(group.remove_student(student_2) )
+print(group.get_students())
 
 print(group.remove_student(student_2) )
 print(group.get_students())
