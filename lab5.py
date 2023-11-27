@@ -9,14 +9,14 @@ class Student:
         self.points = {}
 
     def __repr__(self):
-         return "Студент"
-    
+        return "Студент"
+
     def add_to_points(self, **kwargs):
         """
         Adds subject and his mark for student
         """
         for subject, point in kwargs.items():
-                self.points[subject] = point
+            self.points[subject] = point
 
     def average_point(self):
         values = len(self.points)
