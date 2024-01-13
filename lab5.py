@@ -58,6 +58,7 @@ class Group:
         """
         self.students = []
         self.student = students
+
     def add_student(self, student):
         """
         Method adds student
@@ -66,6 +67,7 @@ class Group:
             self.students.append(student)
         else:
             print("This is not a student")
+
     def remove_student(self,student):
         """
         Method removes student
